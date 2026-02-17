@@ -855,7 +855,7 @@ p { margin-bottom: 1rem; }
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-primary-light);
+  color: #ffffff;
   white-space: nowrap;
   background: rgba(0,124,186,0.15);
   padding: 4px 14px;

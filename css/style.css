@@ -762,8 +762,176 @@ p { margin-bottom: 1rem; }
 }
 
 /* ══════════════════════════════════════ */
-/* PACKAGES / PRICING CARDS              */
+/* PACKAGES — ACCORDION CARDS            */
 /* ══════════════════════════════════════ */
+
+/* Category Section */
+.pkg-category {
+  margin-bottom: var(--space-lg);
+}
+.pkg-category-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* Accordion Item */
+.pkg-accordion {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-medium);
+  border-radius: var(--radius-lg);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.pkg-accordion.open {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+/* Accordion Header (clickable) */
+.pkg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  font-family: var(--font-body);
+  text-align: left;
+  transition: background 0.2s ease;
+}
+.pkg-header:hover {
+  background: rgba(0,124,186,0.03);
+}
+.pkg-header:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+}
+.pkg-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pkg-chevron {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.pkg-accordion.open .pkg-chevron {
+  transform: rotate(90deg);
+}
+.pkg-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pkg-starting-price {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* Accordion Body (expandable) */
+.pkg-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.pkg-accordion.open .pkg-body {
+  max-height: 1200px;
+}
+.pkg-body-inner {
+  padding: 0 24px 24px;
+  border-top: 1px solid var(--color-gray-medium);
+}
+
+/* Feature List */
+.pkg-features {
+  padding: 20px 0 16px;
+}
+.pkg-features li {
+  padding: 5px 0;
+  font-size: 0.9rem;
+  color: var(--color-body);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+.pkg-features li::before {
+  content: '✓';
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Upgrade Note */
+.pkg-upgrade {
+  background: rgba(0,124,186,0.06);
+  border-left: 3px solid var(--color-primary);
+  padding: 12px 16px;
+  margin: 8px 0 16px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.85rem;
+  color: var(--color-body);
+}
+.pkg-upgrade strong {
+  color: var(--color-primary);
+}
+
+/* Price Table */
+.pkg-prices {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+.pkg-prices td {
+  padding: 8px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--color-gray-medium);
+}
+.pkg-prices td:first-child {
+  color: var(--color-body);
+}
+.pkg-prices td:last-child {
+  text-align: right;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 1rem;
+}
+.pkg-prices tr:last-child td {
+  border-bottom: none;
+}
+.pkg-disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-body);
+  font-style: italic;
+  margin: 8px 0 16px;
+  opacity: 0.7;
+}
+.pkg-body .btn {
+  width: 100%;
+}
+
+/* Legacy pricing grid (kept for ceramic-pro page) */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

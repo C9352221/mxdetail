@@ -126,6 +126,31 @@
   }
 
   // ══════════════════════════════════════
+  // PACKAGE ACCORDIONS
+  // ══════════════════════════════════════
+  document.querySelectorAll('.pkg-header').forEach(function (header) {
+    header.addEventListener('click', function () {
+      var accordion = this.closest('.pkg-accordion');
+      var isOpen = accordion.classList.contains('open');
+
+      // Close all other accordions in the same category
+      var category = accordion.closest('.pkg-category');
+      if (category) {
+        category.querySelectorAll('.pkg-accordion.open').forEach(function (openItem) {
+          if (openItem !== accordion) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.pkg-header').setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // Toggle this one
+      accordion.classList.toggle('open', !isOpen);
+      this.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  // ══════════════════════════════════════
   // PARALLAX — MOBILE FALLBACK
   // ══════════════════════════════════════
   if (isMobile) {

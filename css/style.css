@@ -766,6 +766,15 @@ p { margin-bottom: 1rem; }
 /* ══════════════════════════════════════ */
 
 /* Category Section */
+/* Packages section — dark background */
+.section-packages {
+  background: var(--color-black);
+  padding: var(--space-xl) 0;
+}
+.section-packages h2 {
+  color: var(--color-white);
+}
+
 .pkg-category {
   margin-bottom: var(--space-lg);
 }
@@ -775,23 +784,25 @@ p { margin-bottom: 1rem; }
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--color-primary);
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-white);
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  border-radius: var(--radius-lg);
   margin-bottom: 16px;
+  border: none;
 }
 
 /* Accordion Item */
 .pkg-accordion {
-  background: var(--color-white);
-  border: 1px solid var(--color-gray-medium);
+  background: var(--color-black-deep);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .pkg-accordion.open {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 24px rgba(0,124,186,0.2);
   border-color: var(--color-primary);
 }
 
@@ -810,7 +821,7 @@ p { margin-bottom: 1rem; }
   transition: background 0.2s ease;
 }
 .pkg-header:hover {
-  background: rgba(0,124,186,0.03);
+  background: rgba(0,124,186,0.08);
 }
 .pkg-header:focus-visible {
   outline: 3px solid var(--color-primary);
@@ -835,16 +846,19 @@ p { margin-bottom: 1rem; }
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 .pkg-starting-price {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   white-space: nowrap;
+  background: rgba(0,124,186,0.15);
+  padding: 4px 14px;
+  border-radius: 20px;
 }
 
 /* Accordion Body (expandable) */
@@ -858,7 +872,7 @@ p { margin-bottom: 1rem; }
 }
 .pkg-body-inner {
   padding: 0 24px 24px;
-  border-top: 1px solid var(--color-gray-medium);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 /* Feature List */
@@ -868,7 +882,7 @@ p { margin-bottom: 1rem; }
 .pkg-features li {
   padding: 5px 0;
   font-size: 0.9rem;
-  color: var(--color-body);
+  color: var(--color-text-light);
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -876,7 +890,7 @@ p { margin-bottom: 1rem; }
 }
 .pkg-features li::before {
   content: '✓';
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 1px;
@@ -884,16 +898,16 @@ p { margin-bottom: 1rem; }
 
 /* Upgrade Note */
 .pkg-upgrade {
-  background: rgba(0,124,186,0.06);
+  background: rgba(0,124,186,0.12);
   border-left: 3px solid var(--color-primary);
   padding: 12px 16px;
   margin: 8px 0 16px;
   border-radius: 0 var(--radius) var(--radius) 0;
   font-size: 0.85rem;
-  color: var(--color-body);
+  color: var(--color-text-light);
 }
 .pkg-upgrade strong {
-  color: var(--color-primary);
+  color: var(--color-primary-light);
 }
 
 /* Price Table */
@@ -903,29 +917,29 @@ p { margin-bottom: 1rem; }
   margin: 12px 0;
 }
 .pkg-prices td {
-  padding: 8px 0;
+  padding: 10px 0;
   font-size: 0.9rem;
-  border-bottom: 1px solid var(--color-gray-medium);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .pkg-prices td:first-child {
-  color: var(--color-body);
+  color: var(--color-text-light);
 }
 .pkg-prices td:last-child {
   text-align: right;
   font-family: var(--font-display);
   font-weight: 700;
-  color: var(--color-black);
-  font-size: 1rem;
+  color: var(--color-white);
+  font-size: 1.05rem;
 }
 .pkg-prices tr:last-child td {
   border-bottom: none;
 }
 .pkg-disclaimer {
   font-size: 0.75rem;
-  color: var(--color-body);
+  color: var(--color-text-light);
   font-style: italic;
   margin: 8px 0 16px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .pkg-body .btn {
   width: 100%;

@@ -766,9 +766,9 @@ p { margin-bottom: 1rem; }
 /* ══════════════════════════════════════ */
 
 /* Category Section */
-/* Packages section — dark background */
+/* Packages section — dark blue gradient background */
 .section-packages {
-  background: var(--color-black);
+  background: linear-gradient(175deg, #0d2137 0%, #132d47 35%, #181818 70%, #111111 100%);
   padding: var(--space-xl) 0;
 }
 .section-packages h2 {
@@ -794,16 +794,17 @@ p { margin-bottom: 1rem; }
 
 /* Accordion Item */
 .pkg-accordion {
-  background: var(--color-black-deep);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(145deg, #1a2a3d, #1e2d40);
+  border: 1px solid rgba(0,124,186,0.15);
   border-radius: var(--radius-lg);
   margin-bottom: 10px;
   overflow: hidden;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .pkg-accordion.open {
-  box-shadow: 0 4px 24px rgba(0,124,186,0.2);
+  box-shadow: 0 4px 24px rgba(0,124,186,0.25);
   border-color: var(--color-primary);
+  background: linear-gradient(145deg, #1e3350, #1a2a3d);
 }
 
 /* Accordion Header (clickable) */
@@ -872,7 +873,7 @@ p { margin-bottom: 1rem; }
 }
 .pkg-body-inner {
   padding: 0 24px 24px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(0,124,186,0.2);
 }
 
 /* Feature List */
@@ -898,13 +899,13 @@ p { margin-bottom: 1rem; }
 
 /* Upgrade Note */
 .pkg-upgrade {
-  background: rgba(0,124,186,0.12);
-  border-left: 3px solid var(--color-primary);
-  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(0,124,186,0.18), rgba(6,100,145,0.1));
+  border-left: 3px solid var(--color-primary-light);
+  padding: 14px 18px;
   margin: 8px 0 16px;
   border-radius: 0 var(--radius) var(--radius) 0;
   font-size: 0.85rem;
-  color: var(--color-text-light);
+  color: rgba(255,255,255,0.85);
 }
 .pkg-upgrade strong {
   color: var(--color-primary-light);
@@ -919,7 +920,7 @@ p { margin-bottom: 1rem; }
 .pkg-prices td {
   padding: 10px 0;
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(0,124,186,0.12);
 }
 .pkg-prices td:first-child {
   color: var(--color-text-light);

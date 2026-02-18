@@ -990,6 +990,9 @@ p { margin-bottom: 1rem; }
   gap: 24px;
   margin-top: var(--space-lg);
 }
+.pricing-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
 .pricing-card {
   background: var(--color-white);
   border-radius: var(--radius-lg);
@@ -1002,6 +1005,27 @@ p { margin-bottom: 1rem; }
 .pricing-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+}
+.pricing-featured {
+  border-color: var(--color-primary);
+  position: relative;
+  box-shadow: 0 0 0 2px var(--color-primary), var(--shadow-md);
+}
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 .pricing-card.featured {
   border-color: var(--color-primary);
@@ -1272,6 +1296,7 @@ p { margin-bottom: 1rem; }
   .nav-toggle { display: block; }
 
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Tablet portrait */
@@ -1287,7 +1312,8 @@ p { margin-bottom: 1rem; }
     direction: ltr;
   }
   .reviews-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .pricing-grid,
+  .pricing-grid-4 { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
   .location-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 

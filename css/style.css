@@ -192,18 +192,21 @@ p { margin-bottom: 1rem; }
 }
 .nav-logo img,
 .nav-logo-img {
-  height: 45px;
+  height: 70px;
   width: auto;
   display: block;
+  mix-blend-mode: screen;
 }
 .footer-logo .nav-logo-img {
-  height: 50px;
+  height: 80px;
   width: auto;
   margin-bottom: 12px;
+  mix-blend-mode: screen;
 }
 .parallax-logo {
-  max-width: 280px;
+  max-width: 400px;
   height: auto;
+  mix-blend-mode: screen;
 }
 .nav-links {
   display: flex;

@@ -178,7 +178,7 @@ p { margin-bottom: 1rem; }
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar.scrolled {
-  background: rgba(13,33,55,0.95);
+  background: rgba(0,124,186,0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);

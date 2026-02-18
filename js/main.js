@@ -164,6 +164,23 @@
   });
 
   // ══════════════════════════════════════
+  // COATING CARD DETAILS TOGGLE
+  // ══════════════════════════════════════
+  document.querySelectorAll('.coating-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var details = this.nextElementSibling;
+      var isOpen = details.classList.contains('open');
+
+      // Toggle this one
+      details.classList.toggle('open', !isOpen);
+      this.setAttribute('aria-expanded', String(!isOpen));
+      this.textContent = '';
+      this.innerHTML = (!isOpen ? 'Hide Details' : 'View Details') +
+        ' <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>';
+    });
+  });
+
+  // ══════════════════════════════════════
   // PARALLAX — MOBILE FALLBACK
   // ══════════════════════════════════════
   if (isMobile) {

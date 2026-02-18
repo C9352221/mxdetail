@@ -130,7 +130,7 @@ p { margin-bottom: 1rem; }
 /* TOP INFO BAR                          */
 /* ══════════════════════════════════════ */
 .top-bar {
-  background: var(--color-black-deep);
+  background: #0d2137;
   color: var(--color-text-light);
   font-size: 0.8rem;
   height: var(--top-bar-height);
@@ -178,7 +178,7 @@ p { margin-bottom: 1rem; }
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar.scrolled {
-  background: rgba(24,24,24,0.95);
+  background: rgba(13,33,55,0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
